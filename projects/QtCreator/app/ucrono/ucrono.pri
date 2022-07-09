@@ -16,7 +16,7 @@
 #   File: ucrono.pri
 #
 # Author: $author$
-#   Date: 1/26/2022
+#   Date: 5/7/2022
 #
 # generic QtCreator project .pri file for framework ucrono executable ucrono
 ########################################################################
@@ -44,23 +44,25 @@ XOS_CONSOLE_MAIN_MAIN \
 # ucrono_exe OBJECTIVE_HEADERS
 #
 #ucrono_exe_OBJECTIVE_HEADERS += \
-#$${UCRONO_SRC}/xos/app/console/ucrono/main.hh \
+#$${UCRONO_SRC}/xos/app/console/ucrono/version/main.hh \
 
 # ucrono_exe OBJECTIVE_SOURCES
 #
 #ucrono_exe_OBJECTIVE_SOURCES += \
-#$${UCRONO_SRC}/xos/app/console/ucrono/main.mm \
+#$${UCRONO_SRC}/xos/app/console/ucrono/version/main.mm \
 
 ########################################################################
 # ucrono_exe HEADERS
 #
 ucrono_exe_HEADERS += \
-$${UCRONO_SRC}/xos/app/console/ucrono/main.hpp \
+$${UCRONO_SRC}/xos/app/console/ucrono/version/main_opt.hpp \
+$${UCRONO_SRC}/xos/app/console/ucrono/version/main.hpp \
 
 # ucrono_exe SOURCES
 #
 ucrono_exe_SOURCES += \
-$${UCRONO_SRC}/xos/app/console/ucrono/main.cpp \
+$${UCRONO_SRC}/xos/app/console/ucrono/version/main_opt.cpp \
+$${UCRONO_SRC}/xos/app/console/ucrono/version/main.cpp \
 
 ########################################################################
 # ucrono_exe FRAMEWORKS

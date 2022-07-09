@@ -16,14 +16,14 @@
 #   File: libucrono.pri
 #
 # Author: $author$
-#   Date: 1/26/2022
+#   Date: 3/28/2022, 5/11/2022
 #
 # generic QtCreator project .pri file for framework ucrono static library libucrono
 ########################################################################
 
 ########################################################################
 # libucrono
-XOS_LIB_UCRONO_VERSION_BUILD_DATE = 1/26/2022 #$$system(~/bin/utility/tdate)
+XOS_LIB_UCRONO_VERSION_BUILD_DATE = 5/11/2022 #$$system(~/bin/utility/tdate)
 
 # libucrono TARGET
 #

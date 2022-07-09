@@ -16,7 +16,7 @@
 #   File: ucrono.pri
 #
 # Author: $author$
-#   Date: 1/26/2022
+#   Date: 3/28/2022
 #
 # build specific QtCreator project .pri file for framework ucrono
 ########################################################################
