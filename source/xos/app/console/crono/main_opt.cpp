@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////
-/// Copyright (c) 1988-2022 $organization$
+/// Copyright (c) 1988-2021 $organization$
 ///
 /// This software is provided by the author and contributors ``as is'' 
 /// and any express or implied warranties, including, but not limited to, 
@@ -13,29 +13,27 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: version.hpp
+///   File: main_opt.cpp
 ///
 /// Author: $author$
-///   Date: 3/28/2022
+///   Date: 8/2/2021
 ///////////////////////////////////////////////////////////////////////
-#if !defined(XOS_LIB_UCRONO_VERSION_HPP)
-#define XOS_LIB_UCRONO_VERSION_HPP
+#include "xos/app/console/crono/main_opt.hpp"
 
-#include "xos/lib/version.hpp"
+#if !defined(XOS_APP_CONSOLE_CRONO_MAIN_OPT_INSTANCE)
+//#define XOS_APP_CONSOLE_CRONO_MAIN_OPT_INSTANCE
+#endif /// !defined(XOS_APP_CONSOLE_CRONO_MAIN_OPT_INSTANCE)
 
 namespace xos {
-namespace lib {
-namespace ucrono {
+namespace app {
+namespace console {
+namespace crono {
 
-/// class version
-class exported version {
-public:
-    /// which
-    static const xos::lib::version& which();
-}; /// class version
+#if defined(XOS_APP_CONSOLE_CRONO_MAIN_OPT_INSTANCE)
+static main_opt the_main_opt;
+#endif /// defined(XOS_APP_CONSOLE_CRONO_MAIN_OPT_INSTANCE)
 
-} /// namespace ucrono
-} /// namespace lib
+} /// namespace crono
+} /// namespace console
+} /// namespace app
 } /// namespace xos
-
-#endif /// !defined(XOS_LIB_UCRONO_VERSION_HPP)

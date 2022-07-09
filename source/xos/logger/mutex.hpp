@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////
-/// Copyright (c) 1988-2022 $organization$
+/// Copyright (c) 1988-2020 $organization$
 ///
 /// This software is provided by the author and contributors ``as is'' 
 /// and any express or implied warranties, including, but not limited to, 
@@ -13,29 +13,38 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: version.hpp
+///   File: mutex.hpp
 ///
 /// Author: $author$
-///   Date: 3/28/2022
+///   Date: 7/24/2020
 ///////////////////////////////////////////////////////////////////////
-#if !defined(XOS_LIB_UCRONO_VERSION_HPP)
-#define XOS_LIB_UCRONO_VERSION_HPP
+#ifndef XOS_LOGGER_MUTEX_HPP
+#define XOS_LOGGER_MUTEX_HPP
 
-#include "xos/lib/version.hpp"
+#include "xos/mt/os/mutex.hpp"
 
 namespace xos {
-namespace lib {
-namespace ucrono {
+namespace logger {
 
-/// class version
-class exported version {
+/// class mutext
+template <class TExtends = mt::os::mutex, class TImplements = typename TExtends::implements>
+class exported mutext: virtual public TImplements, public TExtends {
 public:
-    /// which
-    static const xos::lib::version& which();
-}; /// class version
+    typedef TImplements implements;
+    typedef TExtends extends;
+    typedef mutext derives;
 
-} /// namespace ucrono
-} /// namespace lib
+    /// constructor / destructor
+    mutext(const mutext& copy): extends(copy) {
+    }
+    mutext(): extends(false) {
+    }
+    virtual ~mutext() {
+    }
+}; /// class mutext
+typedef mutext<> mutex;
+
+} /// namespace logger
 } /// namespace xos
 
-#endif /// !defined(XOS_LIB_UCRONO_VERSION_HPP)
+#endif /// ndef XOS_LOGGER_MUTEX_HPP 
